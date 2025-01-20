@@ -1,0 +1,138 @@
+
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    grid-area: header;
+    line-height: 4rem;
+    background-color: #24527a;
+    color: aliceblue;
+    display: flex;
+    align-items: center ;
+    justify-content: space-around;
+}
+.icon-titulo{
+    display: flex; 
+    text-align: center; 
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+.ge{
+    padding-left: 15px;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+}
+menu{
+    grid-area: menu;
+    background-color: dimgray;
+    text-align: center; 
+    display: flex; 
+    flex-direction: column;
+    padding-block: 15px;
+}
+.ordenar-por{
+    padding-bottom: 10px;
+}
+.selector{
+    padding-inline: 100px;
+}
+.paginas {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+.paginas a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightblue;
+  }
+.guitarimg{
+    width:300px;
+    height: 300px;
+}
+.tarjeta{
+    border:4px;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+section{
+    grid-area: section;
+    text-decoration: blue;
+}
+footer{
+    grid-area: footer ;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    background-color: #0a4579;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px;
+}
+@media (min-width: 576px){
+    body{
+        display: grid;
+        grid-template-areas: 
+        "header menu"
+        "header main"
+        "footer section";
+        grid-template-columns: 13rem 1fr;
+        grid-template-rows: 4em 1fr 4em;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0px;
+        line-height: 1.5rem;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .guitarimg{
+        width:200px;
+        height: 200px;
+    }
+    .selector{
+        padding-inline: 500px;
+    }
+    .icon-titulo{
+        justify-content: center;
+        margin-left: 0;
+        padding-top: 20px;
+    }
+    ul{
+        flex-direction: column;
+        padding-top: 40px;
+    }
+    section{
+        align-items: center;
+    
+    }
+    footer{
+        padding: 0;
+        margin:0;
+        background-color: #0a4579;
+    }
+}
